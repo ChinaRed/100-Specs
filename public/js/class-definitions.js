@@ -213,7 +213,12 @@ var linuxFlavors = [ "Gentoo", "Fedora", "Debian", "Slackware", "Red Hat", "Bieb
  * Surface      => 320
  *
  */
-
+laptopCosts = {
+  MacBook : 1500,
+  Alienware : 2500,
+  HP : 499,
+  Surface : 320
+};
 
 /* Step 17
  *
