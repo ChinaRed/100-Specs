@@ -340,6 +340,36 @@ function installLinux (Linux){
  * @return {Bool when False, String when True}
  *
  */
+ var beers = {
+  IPA : "Ale",
+  Lager : "Strong",
+  Heffeweisen : "German",
+  Stout : [ "Thick", "Dark"],
+  Porter : "Bitter",
+  Ale : [ "Light", "Golden"]
+};
+
+
+function drink (typeOfBeer){
+    console.log(typeOfBeer);
+  if (beers.hasOwnProperty(typeOfBeer) === false){
+    return false;
+  }
+  if (beers[typeOfBeer] instanceof Array){
+    return "This " + typeOfBeer + " is " + beers[typeOfBeer][0] + " and " + beers[typeOfBeer][1] + ".";
+  }
+  return "This " + typeOfBeer + " is " + beers[typeOfBeer] + ".";
+
+}
+
+
+//   if (typeOfBeer === IPA || typeOfBeer === Lager || typeOfBeer === Heffeweisen || typeOfBeer === Stout || typeOfBeer === Porter || typeOfBeer === Ale || typeOfBeer === Golden ){
+//   console.log("This " + beerName + "is " + beerDescription);
+//   return true;
+//   }
+//   console.log("This " + beerName + "is " + beerDescription[0] + " and " + beerDescription[2]);
+//   return true;
+// }
 
 
 /* Step 24
