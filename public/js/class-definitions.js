@@ -314,7 +314,14 @@ function addNumbers (Number1, Number2){
  * @return {Bool}
  *
  */
-
+function installLinux (Linux){
+  if (linuxFlavors.indexOf(Linux) === -1){
+    console.log("failure");
+    return false;
+  } 
+  console.log("success");
+  return true;
+}
 
 /* Step 23
  *
