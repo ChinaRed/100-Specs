@@ -701,12 +701,6 @@ PrincessLeia.prototype.marries = function (loveInterest){
 };
 
 
-// var PrincessLeia = new Person( name, money, age, gender, isInTrouble);
-//   this.name = name;
-//   this.money = money;
-//   isInTrouble = null;
-
-
 /* Step 34
  *
  * Define a class named "Stapler" with properties "color"
@@ -724,7 +718,17 @@ PrincessLeia.prototype.marries = function (loveInterest){
  *   staplePapers
  *
  */
+function Stapler (color,maxPapers) {
+  this.color = color;
+  this.maxPapers = maxPapers;
+}
 
+Stapler.prototype.staplePapers = function (numPapers){
+  if (numPapers <= this.maxPapers){
+    return true;
+  }
+  return false;
+};
 
 /* Step 35
  *
