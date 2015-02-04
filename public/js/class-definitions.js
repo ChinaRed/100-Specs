@@ -158,7 +158,18 @@ browsers = {
  *  isDouble  => true
  *
  */
-
+rainbow = {
+  colors : {
+    red    : "#F0280A",
+    orange : "#FF8800",
+    yellow : "#FFDD00",
+    green  : "#51AB0C",
+    blue   : "#1593ED",
+    indigo : "#5215ED",
+    violet : "#A915ED",
+  },
+  double : true
+};
 
 /* Step 14
  *
