@@ -473,7 +473,20 @@ function favoritePlanet (currentPlanet){
  *   earnMoney
  *
  */
+function Person (name, money, age, gender){
+  this.name = name;
+  this.money = money;
+  this.age = age;
+  this.gender = gender;
+}
 
+Person.prototype.spendMoney = function (spend){
+  this.money = this.money - spend;
+};
+
+Person.prototype.earnMoney = function (earn){
+  this.money = this.money + earn;
+};
 
 /* Step 28
  *
@@ -487,6 +500,20 @@ function favoritePlanet (currentPlanet){
  *
  */
 
+ laptopCosts = {
+  MacBook : 1500,
+  Alienware : 2500,
+  HP : 499,
+  Surface : 320
+};
+
+function purchaseLaptop(laptop) {
+  var ltCost = laptopCosts[laptop];
+  if (laptopCosts.hasOwnProperty(laptop) === true){
+    return (ltCost.toString());
+  }
+  return -1;
+}
 
 /* Step 29
  *
