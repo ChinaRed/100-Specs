@@ -410,6 +410,15 @@ function browseURL (browser){
  * @return {String}
  *
  */
+var livingOrganismClassification = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"];
+
+function listLivingOrgClass (){
+  var out = "";
+  for (var i = 0; i < livingOrganismClassification.length; i++) {
+    out += "<li>" + livingOrganismClassification[i] + "</li>";
+  }
+  return "<ul>" + out + "</ul>";
+} 
 
 
 /* Step 26
@@ -431,7 +440,16 @@ function browseURL (browser){
  * @return {String}
  *
  */
+planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
 
+function favoritePlanet (currentPlanet){
+  var randomPlanet = Math.floor (Math.random() * planets.length);
+  if (planets.indexOf(currentPlanet) === -1){
+    return (currentPlanet + " is not a planet!");
+  }
+  return ("I'm from " + currentPlanet + ", but I wish I could go to " + planets[randomPlanet] + ".");
+      //return true;
+}
 
 /* Step 27
  *
