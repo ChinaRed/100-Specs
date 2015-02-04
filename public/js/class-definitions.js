@@ -384,6 +384,22 @@ function drink (typeOfBeer){
  *
  */
 
+ browsers = {
+  Chromium : "google.com",
+  Safari : "apple.com",
+  Opera : "opera.com",
+  Firefox : "mozilla.org",
+  Sleipnir : "fenrir-inc.com",
+  Konqueror : "konqueror.org"
+};
+
+function browseURL (browser){
+  if (browsers.hasOwnProperty(browser)){
+    return browsers[browser];
+  }
+  console.log("Error");
+  return false;
+}
 
 /* Step 25
  *
