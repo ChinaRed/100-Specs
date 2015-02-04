@@ -587,6 +587,26 @@ Pen.prototype.write = function (message){
  *   grow
  * 
  */
+function Garden (plantsTotal){
+  this.plantsTotal = plantsTotal;
+  this.isWatered = false;
+  //console.log(plantsTotal);
+}
+
+Garden.prototype.water = function(){
+  if (this.isWatered === false){
+    this.isWatered = true;
+  }
+};
+  
+Garden.prototype.grow = function(){
+  if (this.isWatered === true){
+    this.isWatered = false;
+    this.plantsTotal = this.plantsTotal + 1;
+    return true;
+  } 
+  return false;
+};
 
 
 /* Step 32
