@@ -1037,7 +1037,7 @@ function Shape (sides){
  * @param {anything} contents The contents of the box
  * @param {boolean} isOpen     Whether the box is opened or closed
  */
-function Box (contents,isOpen){
+function Box (contents){
   this.contents = contents;
   this.isOpen = false;
 }
@@ -1048,7 +1048,9 @@ function Box (contents,isOpen){
  * Door class
  * @param {boolean} isOpen Whether the door is opened or closed
  */
-
+function Door (){
+  this.isOpen = false;
+}
 
 /**
  * Step 55
