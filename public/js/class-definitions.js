@@ -798,7 +798,6 @@ Scientist.prototype.addDiscovery = function(string){
   //var discoveriesStr = this.discoveries.toString();
   if (this.discoveries.length === 1){
     return ("I discovered " + this.discoveries[0] + ".");
-    
   }
   if (this.discoveries.length === 2){
     return ("I discovered " + this.discoveries[0] + " and " + this.discoveries[1] + ".");
@@ -807,16 +806,6 @@ Scientist.prototype.addDiscovery = function(string){
     return ("I discovered " + this.discoveries[0] + ", " + this.discoveries[1] + ", and " + this.discoveries[2] + ".");
   }
 };
-
-// examples:
-//  * ["Gravity"] will be returned as:
-//  * "I discovered Gravity."
-//  *
-//  * ["Gravity", "Theory of Relativity"] will be returned as:
-//  * "I discovered Gravity and Theory of Relativity."
-//  * 
-//  * ["Gravity", "Theory of Relativity", "Jesus Christ"] will be returned as:
-//  *       "I discovered Gravity, Theory of Relativity, and Jesus Christ."
 
 
 /* Step 36
@@ -1012,7 +1001,10 @@ Scientist.prototype.addDiscovery = function(string){
  * @param {string} species The animal species
  * @param {string} gender  male or female
  */
-
+function Animal (species,gender){
+  this.species = species;
+  this.gender = gender;
+}
 
 /**
  * Step 51
