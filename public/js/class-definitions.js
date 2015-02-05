@@ -769,6 +769,55 @@ Stapler.prototype.staplePapers = function (numPapers){
  *   
  */
 
+function Scientist (name, money, age, gender){
+  Person.call(this, name, money, age, gender);
+  this.disciplines = [];
+  this.discoveries = [];
+}
+
+Scientist.prototype = Object.create (Person.prototype, {
+  constructor : {
+    value : Person
+  }
+});
+
+Scientist.prototype.addDiscipline = function(string){
+  this.disciplines.push(string);
+  return this.disciplines;
+};
+
+Scientist.prototype.checkDiscipline = function(string){
+  if (this.disciplines.indexOf(string) > -1){
+    return true;
+  }
+  return false;
+};
+
+Scientist.prototype.addDiscovery = function(string){
+  this.discoveries.push(string);
+  //var discoveriesStr = this.discoveries.toString();
+  if (this.discoveries.length === 1){
+    return ("I discovered " + this.discoveries[0] + ".");
+    
+  }
+  if (this.discoveries.length === 2){
+    return ("I discovered " + this.discoveries[0] + " and " + this.discoveries[1] + ".");
+  } 
+  if (this.discoveries.length === 3){
+    return ("I discovered " + this.discoveries[0] + ", " + this.discoveries[1] + ", and " + this.discoveries[2] + ".");
+  }
+};
+
+// examples:
+//  * ["Gravity"] will be returned as:
+//  * "I discovered Gravity."
+//  *
+//  * ["Gravity", "Theory of Relativity"] will be returned as:
+//  * "I discovered Gravity and Theory of Relativity."
+//  * 
+//  * ["Gravity", "Theory of Relativity", "Jesus Christ"] will be returned as:
+//  *       "I discovered Gravity, Theory of Relativity, and Jesus Christ."
+
 
 /* Step 36
  *
